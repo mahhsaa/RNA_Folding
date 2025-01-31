@@ -11,7 +11,7 @@ The goal is to create an objective function that estimates the Gibbs free energy
 ## 🛠 Installation
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/rna-folding.git
+   git clone https://github.com/mahhsaa/rna-folding.git
    cd rna-folding
 
 
@@ -29,3 +29,12 @@ Generate terminal-friendly profiles: python plot.py scores/
 
 3. **Scoring an RNA Structure**
 Calculate the Gibbs free energy of a PDB structure: python score.py examples/target.pdb scores/
+
+
+## testing the model
+**On Linux/macOS (Bash)**
+
+for pdb_file in data/test_set/*.pdb; do
+    echo "Processing $pdb_file..."
+    python score.py "$pdb_file" scores/ >> results/scores.log
+done
